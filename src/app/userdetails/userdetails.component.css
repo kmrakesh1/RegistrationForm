@@ -1,0 +1,14 @@
+.custom{
+    margin-top: 20px;
+    width: 50% !important;
+    border: 1px solid #000;
+}
+.centeritem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centeritemhi{
+
+    text-align: center;
+}

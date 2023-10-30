@@ -1,0 +1,16 @@
+.width50{
+    width: 50% !important;
+}
+.border{
+    padding: 20px;
+    width: 50%;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+.padding10{
+    padding: left 10px !important;
+    margin-left: 10px;
+}
+.validation-error{
+    color:red;
+}

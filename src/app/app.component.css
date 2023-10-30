@@ -1,0 +1,8 @@
+.margin-20{
+    margin-left: 20px;
+}
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #92e88c !important;
+}

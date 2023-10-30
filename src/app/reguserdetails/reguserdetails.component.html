@@ -1,0 +1,25 @@
+
+<div class="container py-5">
+  <form class="example-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <input class="form-control mb-3 width50" placeholder="username" value="" formControlName="username" />
+    <span class="validation-error" *ngIf="submitted && f.username.errors?.required">Username is required</span>
+    <input class="form-control mb-3 width50" type="email"  placeholder="email"  value="" formControlName="email" />
+     <span class="validation-error" *ngIf="submitted && f.email.errors?.required">Email is required</span>
+    <div class="address-container border"  *ngFor="let group of addressArray.controls; let item = index" formArrayName="address">
+      <div class="form-group" [formGroupName]="item">
+        <input class="form-control mb-3 width50" placeholder="Street" value="" formControlName="city" />
+        <input class="form-control mb-3 width50" placeholder="state" value="" formControlName="state" />
+        <input class="form-control mb-3 width50" placeholder="pincode" value="" formControlName="pincode"/>
+
+        <button *ngIf="item > 0" class="btn btn-danger mb-3" (click)="removeAddress(item)"> Delete Address</button>
+      </div>
+    </div>
+    <div class="form-row org-desc-parent-margin" >
+      <button class="btn btn-primary" (click)="addAddress()">Add Address</button>
+      <button class="btn btn-primary padding10" type="submit">Submit</button>
+    </div>
+  </form>
+  
+  <!-- <h2>Form Values</h2>
+  <pre>{{ userForm.value | json }}</pre>
+</div> -->

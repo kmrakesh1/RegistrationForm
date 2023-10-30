@@ -1,0 +1,28 @@
+<!-- //<p>{{this.formitems | json}}</p> -->
+
+<div class="centeritem" *ngIf="this.formitems.length > 0; else nodata">
+    <table class="table custom">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of formitems">
+                <td>{{item.username}}</td>
+                <td>{{item.email}}</td>
+                <td *ngFor="let addr of item.address">
+                    {{addr.city}}
+                    {{addr.state}}
+                    {{addr.pincode}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template class="centeritemhi" #nodata>
+   <h1>{{error}}</h1> 
+</ng-template>
